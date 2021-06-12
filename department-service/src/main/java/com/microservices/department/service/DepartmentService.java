@@ -1,7 +1,5 @@
 package com.microservices.department.service;
 
-import java.util.Optional;
-
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
@@ -18,9 +16,9 @@ public class DepartmentService {
 	@Autowired
 	private DepartmentRepository repository;
 
-	public Optional<Department> findDepartmentById(Long departmentId) {
+	public Department findDepartmentById(Long departmentId) {
 		log.info("Entering findDepartmentById method of DepartmentService");
-		return this.repository.findById(departmentId);		
+		return this.repository.findById(departmentId).get();		
 	}
 
 	public Department saveDepartment(Department department) {

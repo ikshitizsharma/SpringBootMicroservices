@@ -1,2 +1,7 @@
 server:
-  port: 9099
+  port: 8761
+
+
+#to avoid registering itself to the resgitsry server  
+eureka:  client:    fetch-registry: false
+    register-with-eureka: false

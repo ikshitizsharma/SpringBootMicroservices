@@ -1,7 +1,5 @@
 package com.microservices.department.controller;
 
-import java.util.Optional;
-
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
@@ -25,7 +23,7 @@ public class DepartmentController {
 	
 	
 	@GetMapping("/find/{departmentId}")
-	public Optional<Department> findDepartmentById(@PathVariable("departmentId") Long departmentId) {
+	public Department findDepartmentById(@PathVariable("departmentId") Long departmentId) {
 		log.info("Entering findDepartmentById method of DepartmentController");
 		return this.service.findDepartmentById(departmentId);
 	}
