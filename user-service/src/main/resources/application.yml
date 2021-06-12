@@ -1,0 +1,4 @@
+spring:  application:    name: USER-SERVICE
+
+server:
+  port: 9002  #to register itself to the resgitsry server  eureka:  client:    fetch-registry: true    register-with-eureka: true    service-url:      defaultZone: http://localhost:8761/eureka/  instance:    hostname: localhost
